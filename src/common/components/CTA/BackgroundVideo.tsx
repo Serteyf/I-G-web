@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 
-const BackgroundVideo = (props) => {
+const BackgroundVideo = (props): JSX.Element => {
   return (
     <Box
       {...props.opts}

@@ -2,12 +2,12 @@ import type { NextPage } from "next";
 import clientPromise from "@utils/mongodb";
 
 import Layout from "@components/Layout";
-import Navbar from "@components/Navigation/Navbar";
-import Footer from "@components/Navigation/Footer";
-import { Flex } from "@chakra-ui/react";
 import Landing from "@modules/Landing/Landing";
+import { VisuallyHidden } from "@chakra-ui/react";
 
-export async function getServerSideProps() {
+export async function getServerSideProps(): Promise<{
+  props: { isConnected: boolean };
+}> {
   try {
     await clientPromise;
     return {
@@ -24,11 +24,17 @@ export async function getServerSideProps() {
 const Index: NextPage = (isConnected, { children }) => {
   return (
     <Layout pageTitle={"Landing page"}>
-      <Flex direction={"column"} height={"100vh"}>
-        <Navbar />
-        <Landing isConnected={isConnected}>{children}</Landing>
-        <Footer />
-      </Flex>
+      <VisuallyHidden>
+        {isConnected ? (
+          <h2 className="subtitle">You are connected to MongoDB</h2>
+        ) : (
+          <h2 className="subtitle">
+            You are NOT connected to MongoDB. Check the <code>README.md</code> for
+            instructions.
+          </h2>
+        )}
+      </VisuallyHidden>
+      <Landing isConnected={isConnected}>{children}</Landing>
     </Layout>
   );
 };

@@ -11,13 +11,13 @@ import {
 
 import Blob from "./Blob";
 
-const CTASimple = () => {
+const CTASimple = (): JSX.Element => {
   return (
     <Container maxW={"7xl"}>
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
+        pt={{ base: 20, md: 28 }}
         direction={{ base: "column", md: "row" }}
       >
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>

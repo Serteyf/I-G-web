@@ -10,11 +10,11 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-const Testimonial = ({ children }: { children: ReactNode }) => {
+const Testimonial = ({ children }: { children: ReactNode }): JSX.Element => {
   return <Box>{children}</Box>;
 };
 
-const TestimonialContent = ({ children }: { children: ReactNode }) => {
+const TestimonialContent = ({ children }: { children: ReactNode }): JSX.Element => {
   return (
     <Stack
       bg={useColorModeValue("white", "gray.800")}
@@ -45,7 +45,7 @@ const TestimonialContent = ({ children }: { children: ReactNode }) => {
   );
 };
 
-const TestimonialHeading = ({ children }: { children: ReactNode }) => {
+const TestimonialHeading = ({ children }: { children: ReactNode }): JSX.Element => {
   return (
     <Heading as={"h3"} fontSize={"xl"}>
       {children}
@@ -53,7 +53,7 @@ const TestimonialHeading = ({ children }: { children: ReactNode }) => {
   );
 };
 
-const TestimonialText = ({ children }: { children: ReactNode }) => {
+const TestimonialText = ({ children }: { children: ReactNode }): JSX.Element => {
   return (
     <Text
       textAlign={"center"}
@@ -73,7 +73,7 @@ const TestimonialAvatar = ({
   src: string;
   name: string;
   title: string;
-}) => {
+}): JSX.Element => {
   return (
     <Flex align={"center"} mt={8} direction={"column"}>
       <Avatar src={src} mb={2} />
@@ -87,7 +87,7 @@ const TestimonialAvatar = ({
   );
 };
 
-export default function WithSpeechBubbles() {
+export default function WithSpeechBubbles(): JSX.Element {
   return (
     <Box bg={"none"}>
       <Container maxW={"7xl"} py={28} as={Stack} spacing={12}>

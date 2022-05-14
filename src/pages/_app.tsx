@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import "@styles/globals.scss";
 import customTheme from "@styles/theme";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <ChakraProvider resetCSS theme={customTheme}>
       <ColorModeProvider

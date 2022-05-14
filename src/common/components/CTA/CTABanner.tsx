@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import BackgroundVideo from "./BackgroundVideo";
 
-export default function WithBackgroundImage(): JSX.Element {
+export default function CTABanner(): JSX.Element {
   return (
     <Flex
       w={"full"}

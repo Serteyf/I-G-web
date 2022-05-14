@@ -1,4 +1,4 @@
-const Logo = (props: any) => {
+const Logo = (props: any): JSX.Element => {
   return (
     <svg
       height={32}

@@ -2,7 +2,6 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
   useDisclosure,
   Stack,
-  Flex,
   useColorModeValue,
   Icon,
   Collapse,

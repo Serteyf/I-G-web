@@ -3,7 +3,7 @@ import { useColorModeValue, Stack, Box, Flex, Icon, Text } from "@chakra-ui/reac
 import ChakraLink from "@components/Links/ChakraLink";
 import { NavItem } from "@interfaces/NavItem";
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+const DesktopSubNav = ({ label, href, subLabel }: NavItem): JSX.Element => {
   return (
     <ChakraLink
       href={href}

@@ -1,6 +1,6 @@
 import { Icon } from "@chakra-ui/react";
 
-const Blob = (props) => {
+const Blob = (props): JSX.Element => {
   return (
     <Icon
       width={"100%"}
