@@ -1,5 +1,8 @@
 import React from "react";
 import Head from "next/head";
+import { Flex } from "@chakra-ui/react";
+import Footer from "@modules/Navigation/Footer";
+import Navbar from "@modules/Navigation/Navbar/Navbar";
 
 const Layout = ({ pageTitle, children }): JSX.Element => {
   return (
@@ -9,12 +12,12 @@ const Layout = ({ pageTitle, children }): JSX.Element => {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
       </Head>
-      {children}
+      <Flex direction={"column"} height={"100vh"}>
+        <Navbar {...children} />
+        {children}
+        <Footer />
+      </Flex>
     </>
   );
 };
