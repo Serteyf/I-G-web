@@ -1,25 +1,17 @@
 import CTABanner from "@components/CTA/CTABanner";
 import CTASimple from "@components/CTA/CTASimple";
 import CTAWithVideo from "@components/CTA/CTAWithVideo";
+import Testimonial from "@components/Testimonial";
 import styles from "./Landing.module.scss";
 
-export default function Main({ children, isConnected }) {
+export default function Main({ children, isConnected }): JSX.Element {
   return (
     <>
       <main className={styles.main}>
         <CTABanner />
         <CTASimple />
         <CTAWithVideo />
-        <div>
-          {isConnected ? (
-            <h2 className="subtitle">You are connected to MongoDB</h2>
-          ) : (
-            <h2 className="subtitle">
-              You are NOT connected to MongoDB. Check the <code>README.md</code> for
-              instructions.
-            </h2>
-          )}
-        </div>
+        {/* <Testimonial /> */}
       </main>
       {children}
     </>
